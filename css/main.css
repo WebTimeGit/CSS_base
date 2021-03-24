@@ -1,0 +1,156 @@
+body {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.main_wrapper {
+	background: #000;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	grid-template-columns: 100%;
+	grid-template-areas:
+        "header"
+        "main"
+        "footer";
+	font-size: 36px;
+	font-weight: 700;
+}
+
+.header {
+	background: lightslategrey;
+	grid-area: header;
+	min-height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+	display: flex;
+	justify-content: space-between;
+	background: aliceblue;
+	grid-area: main;
+}
+
+.aside {
+	background: sienna;
+	max-width: 400px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 50px;
+}
+
+.content {
+	background: darkslategrey;
+	max-width: 100%;
+	width: 100%;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.footer {
+	background: lightslategrey;
+	grid-area: footer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60px;
+}
+
+p {
+	font-size: 18px;
+	margin: 5px 0;
+	padding: 5px;
+	text-transform: uppercase;
+	line-height: 32px;
+}
+
+.p1 {
+	background: cadetblue;
+}
+
+h2 {
+	font-size: 36px;
+	margin: 10px;
+	color: black;
+	text-align: center;
+}
+
+h3 {
+	font-size: 26px;
+}
+
+#p2	{
+	/*border: 1px solid cadetblue;*/
+	border-width: 10px;
+	border-style: solid;
+	border-color: red green #000 blue;
+	color: cadetblue;
+}
+
+p[data-name="p3"] {
+	color: cadetblue;
+}
+
+p:not(.p1) {
+	font-size: 22px;
+}
+
+span {
+	font-size: 18px;
+	margin: 5px 0;
+	padding: 5px;
+	text-transform: uppercase;
+	line-height: 32px;
+	display: block;
+}
+
+span:hover {
+	color: cadetblue;
+}
+
+span:not(:hover) {
+	opacity: .3;
+}
+
+.link {
+	color: cadetblue;
+	background: transparent;
+	text-decoration: none;
+}
+
+.div {
+	border: 1px solid cadetblue;
+	color: cadetblue;
+}
+
+.div2 {
+	color: tomato;
+	padding: 5px;
+	margin: 5px;
+}
+
+.span {
+	position: relative;
+	width: 50%;
+	margin: auto;
+}
+
+.span::before {
+	content: 'before';
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.span::after {
+	content: 'after';
+	position: absolute;
+	top: 0;
+	right: 0;
+}
